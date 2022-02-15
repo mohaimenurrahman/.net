@@ -1,0 +1,29 @@
+﻿@model List<ProductsApp.Models.Database.News>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Action</th>
+    </tr>
+
+    @foreach (var n in Model)
+    {
+        <tr>
+            <td>@n.Id</td>
+            <td>@n.name</td>
+            <td>@n.price</td>
+            <td>@n.quantity</td>
+            <td><a href="/Productsapp/Edit/@n.Id">Edit</a></td>
+
+        </tr>
+    }
+</table>
+
